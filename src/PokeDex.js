@@ -23,7 +23,8 @@ class pokeDex extends Component {
     render() {
         return (
             <div className="PokeDex">
-                <h1>PokeDex!</h1>
+                <h3>Total Exp : {this.props.exp}</h3>
+                <h2 style={this.props.isWinner ? { color: '#2de74c' } : { color: '#e97121' }}>{this.props.isWinner ? `Winner 😍` : 'Looser 😞'}</h2>
                 <div className="pokedex-card">
                     {this.props.pokemon.map(pokemon => {
                         return <PokeCard name={pokemon.name} key={pokemon.id} id={pokemon.id} type={pokemon.type} base_experience={pokemon.base_experience} />
