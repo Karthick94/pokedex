@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PokeDex from './PokeDex';
+import './PokeGame.css';
 
 class PokeGame extends Component {
     static defaultProps = {
@@ -27,7 +28,7 @@ class PokeGame extends Component {
         let isWinner1 = (exp1 > exp2) ? true : false;
         return (
             <div>
-                <h1>PokeDex!</h1>
+                <h1 className="pokegame-header">PokeDex!</h1>
                 <PokeDex pokemon={hand1} exp={exp1} isWinner={isWinner1} />
                 <PokeDex pokemon={hand2} exp={exp2} isWinner={!isWinner1} />
             </div>
